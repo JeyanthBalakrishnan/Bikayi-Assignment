@@ -1,13 +1,13 @@
-import NobelPrizeWinner from "./components/NobelPrizeWinner";
-import Heading from "./components/Heading";
 import SuperiorWinners from "./components/SuperiorWinners.";
+import WinnersList from "./components/WinnersList";
 
 function App() {
   return (
-    <div>
-      <Heading></Heading>
-      <NobelPrizeWinner></NobelPrizeWinner>
-      <SuperiorWinners></SuperiorWinners>
+    <div style={{
+      display: "flex",
+    }}>
+      <WinnersList />
+      <SuperiorWinners/>
     </div>
   );
 }

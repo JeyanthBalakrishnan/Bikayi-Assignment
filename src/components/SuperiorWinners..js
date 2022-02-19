@@ -37,15 +37,29 @@ const SuperiorWinners = () => {
     },  [])
 
     return (
-        <div className='superior-list'>
-            <h3 className='superior-header'>Nobel Laureates with more than 1 Awards</h3>
-            {winnerNames && winnerNames.map( (winner, index) =>(
+        <div
+        style={
+            {
+            minWidth: "200px", 
+            display: "flex",
+            flexDirection:"column",
+        }
+        }>
+            <h3 >Nobel Laureates with more than 1 Awards</h3>
+            <ol
+                style={{
+                    margin: 0, 
+                    padding: 0
+                }}>
+                {winnerNames && winnerNames.map( (winner, index) =>(
+                    
                 
-            <ul key={index}>
-               
-               <div key={index} className=''>{winner}</div>
-            </ul>
-        ))}
+                <li key={index} style={{
+                    margin: "10px 0"
+                }}>{winner}</li>
+
+                ))}
+            </ol>
         </div>
     )
 }
